@@ -1,0 +1,68 @@
+
+--- Transactions and Queries ---
+
+peer chaincode invoke ... CreateProduct P100
+TxID: 7b9f...
+
+peer chaincode invoke ... CreateShipment S100 P100 Org2MSP
+TxID: c2d1...
+
+peer chaincode invoke ... ReceiveShipment S100
+TxID: e4aa...
+
+peer chaincode query ... GetProduct P100
+{
+  "productId": "P100",
+  "sku": "SKU-ALPHA",
+  "desc": "Red widget",
+  "ownerMSP": "Org2MSP",
+  "status": "IN_TRANSIT"
+}
+
+peer chaincode query ... GetProductHistory P100
+[
+  {"txId":"7b9f...","isDelete":false,"value":"CREATED","timestamp":1730611000},
+  {"txId":"c2d1...","isDelete":false,"value":"IN_TRANSIT","timestamp":1730611100},
+  {"txId":"e4aa...","isDelete":false,"value":"IN_TRANSIT","timestamp":1730611200}
+]
+
+# Negative test
+peer chaincode invoke ... ReceiveShipment S100 (Org3)
+Error: endorsement failure during invoke: "Only intended receiver can accept"
+
+
+
+
+--- Transactions and Queries ---
+
+peer chaincode invoke ... CreateProduct P100
+TxID: 7b9f...
+
+peer chaincode invoke ... CreateShipment S100 P100 Org2MSP
+TxID: c2d1...
+
+peer chaincode invoke ... ReceiveShipment S100
+TxID: e4aa...
+
+peer chaincode query ... GetProduct P100
+{
+  "productId": "P100",
+  "sku": "SKU-ALPHA",
+  "desc": "Red widget",
+  "ownerMSP": "Org2MSP",
+  "status": "IN_TRANSIT"
+}
+
+peer chaincode query ... GetProductHistory P100
+[
+  {"txId":"7b9f...","isDelete":false,"value":"CREATED","timestamp":1730611000},
+  {"txId":"c2d1...","isDelete":false,"value":"IN_TRANSIT","timestamp":1730611100},
+  {"txId":"e4aa...","isDelete":false,"value":"IN_TRANSIT","timestamp":1730611200}
+]
+
+# Negative test
+peer chaincode invoke ... ReceiveShipment S100 (Org3)
+Error: endorsement failure during invoke: "Only intended receiver can accept"
+
+
+

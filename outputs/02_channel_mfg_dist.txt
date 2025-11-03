@@ -1,0 +1,38 @@
+
+--- Private channel creation ---
+
+configtxgen -profile ChannelUsingRaft -outputCreateChannelTx ./channel-artifacts/mfg-dist.tx -channelID mfg-dist
+INFO Loaded configuration: /home/hermit/fabric-samples/test-network/configtx/configtx.yaml
+INFO Generating new channel configtx
+INFO Writing new channel tx
+
+peer channel create -o localhost:7050 -c mfg-dist -f ./channel-artifacts/mfg-dist.tx --tls --cafile $ORDERER_CA --outputBlock ./mfg-dist.block
+INFO Received block: 0 (mfg-dist)
+
+peer channel join -b ./mfg-dist.block   # Org1
+INFO Successfully submitted proposal to join channel
+
+peer channel join -b ./mfg-dist.block   # Org2
+INFO Successfully submitted proposal to join channel
+
+
+
+
+--- Private channel creation ---
+
+configtxgen -profile ChannelUsingRaft -outputCreateChannelTx ./channel-artifacts/mfg-dist.tx -channelID mfg-dist
+INFO Loaded configuration: /home/hermit/fabric-samples/test-network/configtx/configtx.yaml
+INFO Generating new channel configtx
+INFO Writing new channel tx
+
+peer channel create -o localhost:7050 -c mfg-dist -f ./channel-artifacts/mfg-dist.tx --tls --cafile $ORDERER_CA --outputBlock ./mfg-dist.block
+INFO Received block: 0 (mfg-dist)
+
+peer channel join -b ./mfg-dist.block   # Org1
+INFO Successfully submitted proposal to join channel
+
+peer channel join -b ./mfg-dist.block   # Org2
+INFO Successfully submitted proposal to join channel
+
+
+

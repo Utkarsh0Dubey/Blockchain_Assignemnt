@@ -1,0 +1,38 @@
+
+--- Public channel creation ---
+
+Creating channel 'global-supply'...
+Status: 201
+{
+  "name": "global-supply",
+  "consensusRelation": "consenter",
+  "status": "active",
+  "height": 1
+}
+... Successfully submitted proposal to join channel (Org1)
+... Successfully submitted proposal to join channel (Org2)
+... Anchor peer set for Org1MSP on channel 'global-supply'
+... Anchor peer set for Org2MSP on channel 'global-supply'
+Channel 'global-supply' joined
+
+
+
+
+--- Public channel creation ---
+
+Creating channel 'global-supply'...
+Status: 201
+{
+  "name": "global-supply",
+  "consensusRelation": "consenter",
+  "status": "active",
+  "height": 1
+}
+... Successfully submitted proposal to join channel (Org1)
+... Successfully submitted proposal to join channel (Org2)
+... Anchor peer set for Org1MSP on channel 'global-supply'
+... Anchor peer set for Org2MSP on channel 'global-supply'
+Channel 'global-supply' joined
+
+
+

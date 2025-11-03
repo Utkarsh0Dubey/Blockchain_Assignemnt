@@ -1,0 +1,28 @@
+
+--- Chaincode deployment ---
+
+Using organization 1
+Chaincode installed on peer0.org1.example.com
+Using organization 2
+Chaincode installed on peer0.org2.example.com
+Approving chaincode definition for org: Org1MSP
+Approving chaincode definition for org: Org2MSP
+Committing chaincode definition on channel 'global-supply'
+Committed chaincode definition: name: supplychain, sequence: 1, version: 1.0
+
+
+
+
+--- Chaincode deployment ---
+
+Using organization 1
+Chaincode installed on peer0.org1.example.com
+Using organization 2
+Chaincode installed on peer0.org2.example.com
+Approving chaincode definition for org: Org1MSP
+Approving chaincode definition for org: Org2MSP
+Committing chaincode definition on channel 'global-supply'
+Committed chaincode definition: name: supplychain, sequence: 1, version: 1.0
+
+
+
